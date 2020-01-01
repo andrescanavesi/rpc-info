@@ -1,7 +1,19 @@
 doctype html
-html
+html(lang='es')
   head
-    script(data-ad-client='ca-pub-9559827534748081', async='', src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+    if isProduction
+      //Global site tag (gtag.js) - Google Analytics
+      link(rel="preconnect" href="//googletagmanager.com"  crossorigin)
+      script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-69506061-1')
+      script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-69506061-1');
+      
+      //adsense
+      script(data-ad-client='ca-pub-9559827534748081', async='', src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+    
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
