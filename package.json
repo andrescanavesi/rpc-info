@@ -3,14 +3,40 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "test": "NODE_ENV=test nyc --check-coverage --lines 10 --per-file --reporter=html mocha tests/test_*.js --recursive --reporter mochawesome --reporter-options reportDir=./test_results --exit"
   },
   "dependencies": {
+    "compression": "^1.7.4",
     "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0",
+    "express-favicon": "^2.0.1",
+    "express-useragent": "^1.0.13",
+    "flexsearch": "^0.6.32",
+    "http-errors": "^1.7.3",
+    "js2xmlparser": "^4.0.0",
+    "log4js": "^6.1.0",
+    "moment": "^2.24.0",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "node-cache": "^5.1.0",
+    "parse-database-url": "^0.3.0",
+    "pg": "^7.15.1",
+    "pug": "^2.0.4",
+    "sql-formatter": "^2.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "mocha": "^6.2.2",
+    "mochawesome": "^4.1.0",
+    "nodemon": "^2.0.2",
+    "nyc": "^14.1.1",
+    "randomstring": "^1.1.5"
   }
 }
