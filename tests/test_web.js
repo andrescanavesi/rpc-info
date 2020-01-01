@@ -3,10 +3,6 @@ const chaiHttp = require('chai-http');
 const randomstring = require('randomstring');
 const app = require('../app');
 
-const { Logger } = require('../utils/Logger');
-
-const log = new Logger('app');
-
 const { assert } = chai;
 const { expect } = chai;
 
