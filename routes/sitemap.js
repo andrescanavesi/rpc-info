@@ -19,7 +19,7 @@ router.get("/", async function (req, res, next) {
         rootUrl.changefreq = "daily";
         rootUrl.priority = "1.0";
         rootUrl["image:image"] = {
-            "image:loc": process.env.RPC_DEFAULT_IMAGE_URL,
+            "image:loc": process.env.RESOPIA_DEFAULT_IMAGE_URL,
             "image:caption": "recetasparaceliacos.info. Recetas para celiacos. Sin TACC. Gluten free",
         };
         collection.push(rootUrl);
