@@ -3,6 +3,11 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
+  const responseJson = {
+    title: 'Recetas para celiacos',
+    isProduction: process.env.NODE_ENV === 'production' || false,
+    adsenseEnabled: process.env.ADSENSE_ENABLED === 'production' || false
+  }
   res.render('index', { title: 'Express', isProduction: true });
 });
 
