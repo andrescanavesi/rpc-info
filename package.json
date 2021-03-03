@@ -24,7 +24,7 @@
     "node-cache": "^5.1.0",
     "parse-database-url": "^0.3.0",
     "pg": "^7.15.1",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "sql-formatter": "^2.3.3"
   },
   "devDependencies": {
